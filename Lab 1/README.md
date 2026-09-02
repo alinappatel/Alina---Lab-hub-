@@ -234,6 +234,12 @@ your response engages with what your master was really doing.
 
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
+video: 
+
+https://github.com/user-attachments/assets/f11527b4-18fa-402d-ba4a-46ca648f5002
+
+
+I chose to fully improve the stage scenario visual, but I also had the idea of updating it to be used nowadays, and thought that a way to do that might be to make a laser pointer version of a spotlight, handheld and easily directed to whatever the subject may be in low light. This could be useful especially in cognitive science classes for example, when teaching about preattentional features and demonstrating inattentional blindness, as well as change blindness, to name a few. 
 
 ---
 
