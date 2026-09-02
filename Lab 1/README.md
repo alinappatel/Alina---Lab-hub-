@@ -212,6 +212,7 @@ wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 **Summarize the feedback you got from your partners here.**
+My partners said that our storyboard was very clear of the purpose. They said the second video was better with lower light so the function is more clear. They said we could use a stronger light in the demonstration. 
 
 ## Remix, Update, or Critique the Master
 
