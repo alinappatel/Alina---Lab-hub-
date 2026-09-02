@@ -2,9 +2,9 @@
 
 _This project is to be done in teams of 2._
 
-**NAME OF BOTH COLLABORATOR(S) HERE**
+**NAME OF BOTH COLLABORATOR(S) HERE** Alina Patel (ap2599), flora zhang (zz979)
 
-**THE MASTERWORK YOU DREW FROM THE HAT:**
+**THE MASTERWORK YOU DREW FROM THE HAT:** theatrical spotlight, thomas drummond 1816
 
 ---
 
@@ -92,6 +92,8 @@ the interaction*:
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
 
+The work is a theatrical spotlight. Light follows a performer as they move across space to draw attention and focus to the subject. 
+
 ## Part A. Plan
 
 For your masterwork, reconstruct the interaction as a scene:
@@ -104,6 +106,10 @@ For your masterwork, reconstruct the interaction as a scene:
 - **Goals:** What is each player trying to do?
 
 **Describe your setting, players, activity, and goals here.**
+setting: stage
+players: backstage crew, performer, audience
+activity: the crew moves the light to follow the performer, the performer is moving as the light follows them, and the audience tracks the performer/movement with their eye or head movements.
+goals: the performer is trying to gain the audiences' attention, the audience is trying to follow the plot and pay attention to what the performer is doing or saying, and the crew is trying to keep that focus clear and the interaction between the performer and the audience without friction. 
 
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
 don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
@@ -111,6 +117,7 @@ and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
 **Include pictures of your storyboards here.**
+[Lab 1 storyboards .pdf](https://github.com/user-attachments/files/31760731/Lab.1.storyboards.pdf)
 
 Use the storyboards to decide what interaction to prototype.
 
@@ -154,6 +161,10 @@ video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
 
+https://github.com/user-attachments/assets/d4931adb-58e9-4050-b88b-489a88f9271b
+
+
+
 ## Part E. (optional) Costume the Device
 
 Only now should you worry about what the device looks like. Costume your phone so it reads
@@ -176,9 +187,15 @@ who doesn't should come away understanding what it's famous for. How might you i
 
 **Include your video here.**
 
+
+https://github.com/user-attachments/assets/940f54a5-ec20-48a4-b89e-0b9a6dbed8b7
+
+
+
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
+I worked with Flora, and she helped with a lot of the code and tinkerbell setup because my coding background isn't as strong. 
 
 ---
 
