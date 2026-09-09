@@ -24,15 +24,9 @@
 
 1 x [Breadboard](https://www.adafruit.com/product/4539)
 
-1 x [Copper Foil Tape](https://www.amazon.com/Conductive-Shielding-Repellent-Electrical-Grounding/dp/B0741ZRP4W/ref=sr_1_5?dchild=1&keywords=conductive+copper+tape&qid=1628142003&sr=8-5)
-
-1 x [Alligator Clips](https://www.amazon.com/WGGE-WG-026-Pieces-Colors-Alligator/dp/B06ZXSCLDH/ref=sr_1_3)
-
 1 x [9G Servo](https://www.digikey.com/en/products/detail/dfrobot/SER0048)
 
 1 x [SparkFun Servo pHAT for Raspberry Pi](https://www.sparkfun.com/sparkfun-servo-phat-for-raspberry-pi.html)
-
-1 x [Micro HDMI Cable - 3ft](https://www.sparkfun.com/micro-hdmi-cable-3ft.html)
 
 1 x [SparkFun Qwiic SHIM](https://www.sparkfun.com/products/15794)
 
