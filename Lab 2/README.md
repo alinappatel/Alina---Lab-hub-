@@ -129,8 +129,8 @@ From your kit take out the display and the [Raspberry Pi 5](https://www.google.c
 Line up the screen and press it on the headers. The hole in the screen should match up with the hole on the raspberry pi.
 
 <p float="left">
-<img src="https://cdn-learn.adafruit.com/assets/assets/000/087/539/medium640/adafruit_products_4393_quarter_ORIG_2019_10.jpg?1579991932" height="200" />
-<img src="https://cdn-learn.adafruit.com/assets/assets/000/082/861/original/adafruit_products_image.png" height="200">
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/087/539/medium640/adafruit_products_4393_quarter_ORIG_2019_10.jpg?1579991932" height="50" />
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/082/861/original/adafruit_products_image.png" height="50">
 </p>
 
 ### Testing your Screen
