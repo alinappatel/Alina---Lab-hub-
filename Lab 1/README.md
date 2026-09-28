@@ -212,7 +212,24 @@ wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 **Summarize the feedback you got from your partners here.**
-My partners said that our storyboard was very clear of the purpose. They said the second video was better with lower light so the function is more clear. They said we could use a stronger light in the demonstration. 
+Group 1: Yangchen Jin, Omar Shair
+
+https://github.com/MortalJin/Interactive-Lab-Hub/tree/Fall2026/Lab%201
+
+My partners said that our storyboard was very clear of the purpose. They said the second video was better with lower light so the function is more clear. They said we could use a stronger light in the demonstration.
+
+Group 2: Ziqiao Gao, Yan Shen
+
+https://github.com/zg375/Interactive-Lab-Hub/tree/4a6babdbe33db81f0d222dfc877ac0c2b9f3c293/Lab%201
+
+They also love the storyboard, which clearly shows how the spotlight works on a stage. For the first video, they are a little confused about the last several seconds, since the light change is not clear in the video. But they figured it out then with the storyboard.
+
+Group 3: Simin Xu & Xiaowei David Zhang Chen
+
+https://github.com/Simonehina/Interactive-Lab-Hub/tree/Fall2026/Lab%201
+
+Members first watched the video we recorded; however, upon the initial viewing, they only grasped the feature where the light followed the movement of the pen and failed to recognize the spotlight scenario we intended to convey. Yet, in the second version of the video, they realized it depicted stage lighting—a detail subsequently confirmed by the storyboard. They also expressed their approval of the clarity with which our storyboard communicated the concept.
+
 
 ## Remix, Update, or Critique the Master
 
