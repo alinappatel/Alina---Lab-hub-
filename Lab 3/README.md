@@ -170,6 +170,12 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
+At 0.2 seconds, I actually had a better experience than with the default 0.4-second setting. It recognized most of what I said accurately and seemed pretty responsive. It still broke up my sentences at natural pauses, like separating "and I'm trying to figure out" from the rest of my thought, but it didn't feel as disruptive as I expected. There were a few transcription mistakes, although overall it performed surprisingly well.
+At 0.7 seconds, the system seemed better at keeping longer phrases together, but it still split up some of my thoughts. It also made some interesting transcription errors, like hearing "Elena" instead of "Alina" and "and pointing" instead of "endpointing." Increasing the silence threshold didn't necessarily improve transcription accuracy, although it did seem to give me more room to pause between words.
+At 1.5 seconds, the system was much better at letting me finish my thoughts without splitting everything into separate transcriptions. It even captured a 13-second stretch of speech where I paused to think about what to say next. This felt more suited to an open-ended conversation where someone might need time to formulate their thoughts. The trade-off is that the system has to wait longer before responding, which could feel unnecessarily slow for simple questions or commands. It still made a few transcription mistakes, but overall I liked how much more conversational the interaction felt.
+
+Overall, I found that the shorter thresholds felt more responsive, but they were also more likely to split my speech at natural pauses. Interestingly, 0.2 seconds actually performed pretty well in my test, despite being the shortest setting. At 0.7 seconds, the system kept some longer phrases together but still interrupted my train of thought. At 1.5 seconds, it allowed me to speak more naturally and pause while thinking. I think the best threshold depends on the interaction: shorter pauses make sense for quick commands, while longer ones are better for open-ended conversations.
+
 ### The complete loop
 
 `echo_bot.py` puts the pieces together: it listens, endpoints, transcribes, and speaks a reply through Piper. The dialogue policy is deliberately trivial — it repeats what you said — so that everything you notice is a property of the timing rather than the content.
@@ -177,6 +183,12 @@ There is no correct value. A system that takes drink orders and a system that li
 ```
 (.venv) $ python echo_bot.py
 ```
+
+I tested `echo_bot.py`, which combines speech detection, transcription, and text-to-speech to repeat what the user says. The system successfully recognized my speech and responded verbally using Piper.
+
+The speech recognition took 1.40 seconds, and the first audio response took another 0.21 seconds, for a total processing gap of 1.61 seconds. It misheard "Hi Pi" as "Hi bye," but otherwise transcribed my sentence correctly.
+
+The response felt a little fast to me, especially compared to the more relaxed interaction I experienced with the 1.5-second silence threshold. I think a slightly longer pause before responding could make the interaction feel more natural for casual conversations.
 
 ## D. Storyboard
 
