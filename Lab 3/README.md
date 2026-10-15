@@ -198,9 +198,13 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
+![IdeaDrop Storyboard](ideadrop_storyboard.png)
+
 \*\***Please describe and document your process.**\*\*
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
+
+I wanted to design something that makes it easier to capture ideas as they come up, especially when I'm in the middle of doing something else and don't want to interrupt my workflow. I started with the idea of a voice-controlled notepad, but added a conversational element where the device reads the idea back and asks for confirmation before saving it. Based on my testing in Part C, I chose a 1.5-second silence threshold for recording ideas so users have time to pause and think without being interrupted. I also added a physical button and pulsing light to indicate when the device is listening, along with a green light to confirm when an idea has been saved. I included options to save, discard, or redo a recording in case the device misunderstands something.
 
 ## E. Acting out the dialogue
 
