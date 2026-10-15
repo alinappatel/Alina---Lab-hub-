@@ -129,10 +129,24 @@ The transcript is not the interesting output here — the timings are. Run it ag
 ```
 
 Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. The `.en` variants are English-only and faster than their multilingual counterparts at the same size.
+I tested three Whisper model sizes on the same 3.72-second audio recording. All three produced the same correct transcription, but processing times increased significantly with model size. The tiny model had an RTF of 0.36x, base had 0.61x, and small had 1.57x. For this recording, the larger models didn't provide any accuracy improvement despite taking longer to process. This suggests that a smaller model might be better suited to a conversational device where response time matters.
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
+I recorded a 5-second clip of myself speaking and tested it with three Whisper models.
+
+| Model | Transcription Time | Real-Time Factor |
+| tiny.en | 1.23s | 0.25x |
+| base.en | 2.20s | 0.44x |
+| small.en | 6.23s | 1.25x |
+
+All three models produced the same words, with only a minor punctuation difference in the small model. The tiny model was the fastest, while the small model took longer than the recording itself to process. For this example, increasing the model size didn't provide any meaningful improvement in transcription, so I think the additional delay stops being worthwhile beyond tiny.en. For a conversational device, I'd prioritize responsiveness over a slightly more sophisticated model when the transcription is already accurate.
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+I created a shell script called `phone_input.sh` that uses eSpeak to verbally ask the user for their 10-digit phone number, records their response using the microphone, and transcribes it using Whisper's tiny.en model.
+
+When I tested it, Whisper correctly recognized all 10 digits, but separated them into inconsistent groups rather than formatting them as a phone number. The transcription took 0.96 seconds, with a real-time factor of 0.12x.
+
+This showed me that even when speech recognition accurately identifies numerical information, the formatting might still need additional processing before the system can reliably use it.
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
