@@ -110,6 +110,7 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 (This shell file should be saved to your own repo for this lab.)
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+Although the words themselves stay the same, the voice changes how the greeting is interpreted. eSpeak's mechanical, robotic speech makes it feel more like an automated command or notification than a personal greeting. Festival sounds somewhat more human, but its speech still feels synthesized. Piper's neural voice sounds more natural and conversational, making the device seem friendlier and more personable. This demonstrates how voice synthesis can influence a user's perception of a device's personality and intentions, even when the spoken content remains unchanged.
 
 ## B. Speech to Text
 
