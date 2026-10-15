@@ -211,7 +211,15 @@ I wanted to design something that makes it easier to capture ideas as they come 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+The interaction was a little different from what I originally imagined. My participant expected to give the device an explicit command, like "save a note," rather than immediately describing her idea. This made me realize that my initial prompt might not be intuitive to someone using the device for the first time.
 
+There was also some confusion around the button. She seemed unsure when to press it and pressed it multiple times, possibly because there wasn't any visual feedback indicating when the device was listening. I think adding a pulsing light or another clear indicator would make the interaction feel more intuitive.
+
+Another interesting moment was when I repeated her idea back to her. She said "yes" before I could finish asking "Should I save that?" and then awkwardly repeated herself after I finished. This made the dialogue feel less natural than I expected and showed me that users might anticipate what the device is going to say instead of waiting for each prompt.
+
+Overall, the test made me realize that the device needs clearer feedback about its current state, more flexibility in how users initiate interactions, and a more natural confirmation process.
+
+[Watch IdeaDrop Wizard-of-Oz Test 1](IdeaDrop_WoZ_Test1.mov)
 
 ---
 
