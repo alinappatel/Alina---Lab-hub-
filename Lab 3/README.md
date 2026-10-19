@@ -230,9 +230,21 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+
+For IdeaDrop, I wanted to improve the clarity of the instructions and the feedback users receive throughout the interaction. The original recording window was fixed at 8 seconds, which could cut users off if they needed more time to explain their ideas. I also wanted to make it more obvious when the device was listening versus processing speech, and give users a way to retry if their idea was recorded or transcribed incorrectly.
+
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
+
+I wanted to use the PiTFT screen and LED to provide visual feedback alongside speech input. The screen could display different messages for each stage, like "Ready," "Listening," "Thinking," and "Transcribed." The LED could also turn on while recording and blink while processing, making the device's status easier to recognize. The PiTFT buttons would let users start recording, retry, or return to the home screen without needing additional voice commands. 
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+For my redesign, I focused on making IdeaDrop's different interaction states more obvious and giving users more control over the recording process. The storyboard shows the user starting a recording, speaking their idea, waiting for the device to transcribe it, and reviewing the result. I also incorporated visual feedback through the screen and LED to help users understand when the device is listening versus processing. After transcription, users can press A to return home or B to retry if their idea wasn't captured correctly.
+![IdeaDrop Part 2 Storyboard](new_storyboard_ideadrop.png) 
+
 4. (optional) Integrate [input devices](inputs.md) in the system
+
+I used the PiTFT's physical buttons to control the interaction, allowing users to start recording or return to the home screen without voice commands. For a future iteration, I would like to separate the input from the device itself by introducing a small wireless handheld remote. This would let users record ideas more naturally without having to reach for the Raspberry Pi.
 
 ## Prototype your system
 
