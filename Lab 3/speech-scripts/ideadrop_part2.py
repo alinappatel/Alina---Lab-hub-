@@ -46,10 +46,13 @@ font = ImageFont.truetype(
 small_font = ImageFont.truetype(
     "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 12
 )
+last_displayed_title = None
 
 # Display one interaction state
 def show_screen(title, subtitle="", transcript=None,
-                bg="#FFE1EC", fg="#A72D68", dot="#A72D68"):
+                bg="#FFE1EC", fg="#A72D68", dot="#A72D68",
+                scroll_offset=0):
+    global last_displayed_title
     image = Image.new("RGB", (240, 135), bg)
     draw = ImageDraw.Draw(image)
 
@@ -62,10 +65,12 @@ def show_screen(title, subtitle="", transcript=None,
     )
 
     if transcript is not None:
-        lines = textwrap.wrap(transcript, width=32)[:4]
-        for i, line in enumerate(lines):
+        lines = textwrap.wrap(transcript, width=28)
+        visible_lines = lines[scroll_offset:scroll_offset + 4]
+
+        for i, line in enumerate(visible_lines):
             draw.text(
-                (120, 49 + i * 15), line,
+                (120, 49 + i * 16), line,
                 font=small_font, fill=fg, anchor="mm"
             )
 
@@ -80,7 +85,10 @@ def show_screen(title, subtitle="", transcript=None,
         )
 
     display.image(image, 90)
-    print("Screen:", title)
+
+    if title != last_displayed_title:
+        print("Screen:", title)
+        last_displayed_title = title
 
 
 def show_home():
@@ -90,12 +98,13 @@ def show_home():
     )
 
 
-def show_result(text):
+def show_result(text, scroll_offset=0):
     if text:
         show_screen(
-            "Transcribed! Save idea?", transcript=text,
+            "Save idea?", transcript=text,
             bg="#FFF0CC", fg="#916212",
-            dot="#E0A12B"
+            dot="#E0A12B",
+            scroll_offset=scroll_offset
         )
     else:
         show_screen(
@@ -211,6 +220,10 @@ transcript = ""
 last_a = True
 last_b = True
 
+scroll_offset = 0
+last_scroll = time.monotonic()
+scroll_text = None
+
 show_home()
 
 try:
@@ -265,6 +278,27 @@ try:
             transcript = record_idea()
             state = "result"
 
+        # Automatically scroll long transcriptions
+        if state == "result" and transcript:
+            if scroll_text != transcript:
+                scroll_text = transcript
+                scroll_offset = 0
+                last_scroll = time.monotonic()
+
+            lines = textwrap.wrap(transcript, width=28)
+
+            if len(lines) > 4:
+                if time.monotonic() - last_scroll >= 2.5:
+                    scroll_offset = (
+                        scroll_offset + 1
+                    ) % (len(lines) - 3)
+
+                    show_result(transcript, scroll_offset)
+                    last_scroll = time.monotonic()
+
+        elif state != "result":
+            scroll_text = None
+            
         last_a = a
         last_b = b
         time.sleep(0.05)
