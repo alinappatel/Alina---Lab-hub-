@@ -18,7 +18,7 @@
 
 ## Lab Overview
 Team: <canvas group name>  
-Members: Full Name (netid, github-handle), ...  
+Members: Alina Patel (ap2599, @alinappatel)  
 Project name: <name>
 
 
@@ -126,23 +126,43 @@ Option 3: (preferred) use the Github.com interface to update the changes.
 ### Part A
 ### Capacitive Sensing, a.k.a. Human-Twizzler Interaction 
 
-We want to introduce you to the [capacitive sensor](https://learn.adafruit.com/adafruit-mpr121-gator) in your kit. It's one of the most flexible input devices we are able to provide. At boot, it measures the capacitance on each of the 12 contacts. Whenever that capacitance changes, it considers it a user touch. You can attach any conductive material. In your kit, you have copper tape that will work well, but don't limit yourself! In the example below, we use Twizzlers--you should pick your own objects.
+For Part A, I made a touch-sensitive version of Fleetwood Mac's Rumours album cover. I wanted to explore how physical artwork could become an interface for music, rather than just using buttons on a screen.
 
+I used an MPR121 capacitive touch sensor, copper tape, paper, and alligator clips to create three touch-sensitive areas, each corresponding to a song from Rumours (Super Deluxe Edition):
 
-<p float="left">
-<img src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/226/medium640/MPR121_top_angle.jpg?1609282424" height="150" />
- 
-</p>
+Pin 11: Songbird
 
-Plug in the capacitive sensor board with the QWIIC connector. Connect your Twizzlers with either the copper tape or the alligator clips (the clips work better). Install the latest requirements from your working virtual environment:
+Pin 9: Never Going Back Again
 
-These Twizzlers are connected to pads 6 and 10. When you run the code and touch a Twizzler, the terminal will print out the following
+Pin 7: Silver Springs
 
-```
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python cap_test.py 
-Twizzler 10 touched!
-Twizzler 6 touched!
-```
+I connected the MPR121 to my Raspberry Pi through the Servo pHAT's Qwiic connection. I first tested the individual contacts with cap_test.py, then wrote rumours_touch.py to detect when each area was touched and released.
+
+Since I wanted the audio to play through my Mac, I created a separate Python controller that receives touch events from the Pi over SSH and controls the Music app using AppleScript.
+
+Interaction: Holding a touch area plays its corresponding song. Releasing it pauses playback, and touching it again resumes the song from where it stopped. Touching a different area switches tracks.
+
+Testing and Iteration
+
+Initially, I tested the MPR121's contacts and then extended the touch inputs using copper tape. I also encountered an I²C connection issue where the sensor wasn't detected at address 0x5A, which I resolved by checking the physical connections.
+
+For audio playback, my first version used afplay, but the music didn't pause correctly when I released the sensor. I switched to controlling Apple Music through AppleScript and adjusted the playback logic until the songs paused and resumed as intended.
+
+The final prototype successfully connected touch and release gestures to music playback. I found it interesting how a simple conductive surface could turn a physical piece of artwork into a functional music interface.
+
+##### Prototype Documentation
+
+**Physical setup:**
+
+![Rumours capacitive touch setup](rumours_setup.JPG)
+
+**Working prototype:**
+
+[Watch the Rumours interaction demo](rumours_demo_compressed.mp4)
+
+**Code:**
+- [Raspberry Pi touch detection](rumours_touch.py)
+- [Mac audio controller](rumours_player.py)
 
 ---
 
