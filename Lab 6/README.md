@@ -8,6 +8,8 @@ Abiola Bolaji (ab3394), Pallavi Srinivas (ps2269), Pallavi Khanna (pk633), Alina
 
 MQTT let our Pis send color readings to a shared server. Each Pi publishes a message to a topic, and the server subscribes to that topic to receive the messages.
 
+We brainstormed a few ideas, including an uno-style game, a digital aurora, and a tamagachi/virtual pet, but ultimately...
+
 The idea we developed was a Mood Ring: each person chooses a color to represent how they feel, and the Pis combine those readings into one shared color.
 
 ---
